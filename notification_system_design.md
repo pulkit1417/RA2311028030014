@@ -18,3 +18,16 @@ Our priority matrix is computed using two primary factors:
 2. **Timestamp Recency**: We translate the human-readable date into absolute Unix epochs.
 
 During evaluation, two objects are initially compared by their Weight integer. In the event of a tiebreaker, the notification possessing the larger Unix epoch (the more recent event) inherits the priority advantage.
+
+## Stage 2
+
+### Frontend Architecture
+The frontend is built as a highly responsive Single Page Application (SPA) using React, orchestrated via Vite. 
+
+**Key Technical Decisions:**
+1. **Material UI (MUI)**: Chosen as the exclusive styling and component framework to ensure enterprise-grade aesthetics and robust responsive layouts across both mobile and desktop screens. Custom CSS is strictly avoided.
+2. **Proxy-based CORS Mitigation**: The API endpoints are called via relative paths that pass through Vite's local development server proxy. This securely circumvents browser-enforced Cross-Origin Resource Sharing (CORS) blocks.
+3. **State Management**: 
+   - `localStorage` is utilized for persistence to track "read" vs "unread" states across browser sessions.
+   - Component state (`useState`) handles dynamic pagination and category filtering.
+4. **Mandatory Logging Integration**: To fulfill strict tracking requirements, the global `logging_middleware` is invoked within `useEffect` hooks and event handlers, logging all UI navigations, API fetches, and user interactions without violating standard `console.log` restrictions.

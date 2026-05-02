@@ -1,122 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Button, Container, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import AllNotifications from './pages/AllNotifications';
+import PriorityInbox from './pages/PriorityInbox';
+import { configureLoggerAuth, Log } from 'logging_middleware';
+import { JWT_AUTH } from './config';
 
-function App() {
-  const [count, setCount] = useState(0)
+// lock in the auth token globally BEFORE any React components render
+configureLoggerAuth(JWT_AUTH);
+
+// setting up a clean layout theme
+const customTheme = createTheme({
+  palette: {
+    primary: { main: '#2563eb' }, // a nice subtle blue
+    secondary: { main: '#e11d48' },
+    background: { default: '#f8fafc' } // slightly off-white for better readability
+  },
+});
+
+function TopNavbar() {
+  const currentPath = useLocation();
+  
+  useEffect(() => {
+    // tracking page movements without spamming the local console
+    Log("frontend", "info", "page", `User jumped to ${currentPath.pathname}`);
+  }, [currentPath]);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <AppBar position="static" color="primary" elevation={1}>
+      <Toolbar>
+        <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, fontWeight: 'bold', textDecoration: 'none', color: 'inherit' }}>
+          Campus Comm
+        </Typography>
+        <Button color="inherit" component={Link} to="/">Inbox</Button>
+        <Button color="inherit" component={Link} to="/priority">High Priority</Button>
+      </Toolbar>
+    </AppBar>
+  );
 }
 
-export default App
+function App() {
+  useEffect(() => {
+    Log("frontend", "info", "component", "App root initialized successfully");
+  }, []);
+
+  return (
+    <ThemeProvider theme={customTheme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <TopNavbar />
+        <Container maxWidth="md" sx={{ mt: 5, mb: 5 }}>
+          <Routes>
+            <Route path="/" element={<AllNotifications />} />
+            <Route path="/priority" element={<PriorityInbox />} />
+          </Routes>
+        </Container>
+      </BrowserRouter>
+    </ThemeProvider>
+  );
+}
+
+export default App;

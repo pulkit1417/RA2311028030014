@@ -1,63 +1,62 @@
-
 [
   {
-    "ID": "18ef25cd-2a17-4137-9fec-68dd8e199551",
+    "ID": "951e2a15-b4db-4d04-9801-d0560167a5b7",
     "Type": "Placement",
-    "Message": "Berkshire Hathaway Inc. hiring",
-    "Timestamp": "2026-05-02 04:54:15"
+    "Message": "Booking Holdings Inc. hiring",
+    "Timestamp": "2026-05-02 01:04:15"
   },
   {
-    "ID": "7588e831-1b81-4da5-a1fa-ce4849935c58",
+    "ID": "6ec52424-0256-49c9-b02e-38765eafea69",
     "Type": "Placement",
-    "Message": "Apple Inc. hiring",
-    "Timestamp": "2026-05-02 02:25:03"
+    "Message": "Advanced Micro Devices Inc. hiring",
+    "Timestamp": "2026-05-01 21:04:09"
   },
   {
-    "ID": "be84072e-a2d2-4278-8176-ec1c17323621",
+    "ID": "221ff909-b54f-4fc1-bbe2-a9fb9eb24e1c",
     "Type": "Placement",
     "Message": "Marriott International Inc. hiring",
-    "Timestamp": "2026-05-01 21:53:51"
+    "Timestamp": "2026-05-01 17:33:45"
   },
   {
-    "ID": "2fcbada0-5a07-40fb-bd38-f02d46bf4685",
+    "ID": "c253167f-4116-41e8-ab3a-118ee76b4d36",
     "Type": "Placement",
-    "Message": "Visa Inc. hiring",
-    "Timestamp": "2026-05-01 19:24:39"
+    "Message": "Amgen Inc. hiring",
+    "Timestamp": "2026-05-01 14:33:09"
   },
   {
-    "ID": "3308a252-c35f-47d6-afe0-fd22c231cae9",
+    "ID": "0b5d677f-a9a9-497d-9501-e3c0c4ea0109",
+    "Type": "Placement",
+    "Message": "Broadcom Inc. hiring",
+    "Timestamp": "2026-05-01 12:04:27"
+  },
+  {
+    "ID": "694548da-126b-4483-afc6-7e2c7353f0c6",
     "Type": "Placement",
     "Message": "Amazon.com Inc. hiring",
-    "Timestamp": "2026-05-01 18:54:21"
+    "Timestamp": "2026-05-01 10:04:51"
   },
   {
-    "ID": "66529c05-66f2-4b64-88f4-6ab2956064bb",
-    "Type": "Result",
-    "Message": "project-review",
-    "Timestamp": "2026-05-02 02:25:15"
+    "ID": "2320d28e-9128-49ef-b54c-7bca68c02a5e",
+    "Type": "Placement",
+    "Message": "Amgen Inc. hiring",
+    "Timestamp": "2026-05-01 10:04:45"
   },
   {
-    "ID": "a2ce37d6-f75a-4731-b57f-471ddd28e023",
-    "Type": "Result",
-    "Message": "end-sem",
-    "Timestamp": "2026-05-01 20:53:57"
+    "ID": "fc383122-e72f-4007-9083-1e3e452d251c",
+    "Type": "Placement",
+    "Message": "Alphabet Inc. Class A hiring",
+    "Timestamp": "2026-05-01 09:34:33"
   },
   {
-    "ID": "7d42f542-5def-42f0-ace5-ac5e6514c111",
-    "Type": "Result",
-    "Message": "mid-sem",
-    "Timestamp": "2026-05-01 17:54:57"
+    "ID": "55b8e6b1-acfd-46a5-a5c9-d67c0f9bcd2a",
+    "Type": "Placement",
+    "Message": "Alphabet Inc. Class A hiring",
+    "Timestamp": "2026-05-01 07:34:39"
   },
   {
-    "ID": "da1ef703-82fc-4645-9a2e-32250bed3ff5",
-    "Type": "Result",
-    "Message": "external",
-    "Timestamp": "2026-05-01 16:55:33"
-  },
-  {
-    "ID": "409beaa9-d34d-4e1a-be3e-04d68c78793f",
+    "ID": "6398a857-2829-46b6-984e-ea83633e527b",
     "Type": "Result",
     "Message": "internal",
-    "Timestamp": "2026-05-01 15:25:27"
+    "Timestamp": "2026-05-01 21:03:15"
   }
 ]

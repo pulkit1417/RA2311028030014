@@ -34,7 +34,8 @@ export const Log = async (stackName, logLevel, packageName, logMessage) => {
   }
 
   try {
-    const apiRes = await fetch("http://20.207.122.201/evaluation-service/logs", {
+    const baseUrl = typeof window !== 'undefined' ? '' : 'http://20.207.122.201';
+    const apiRes = await fetch(`${baseUrl}/evaluation-service/logs`, {
       method: "POST",
       headers: reqHeaders,
       body: JSON.stringify(reqBody),

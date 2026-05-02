@@ -1,8 +1,9 @@
+import 'dotenv/config';
 import { Log, configureLoggerAuth } from 'logging_middleware';
 import * as fileSystem from 'fs';
 
-//this token will eventually always expire that's why i am not putting in the env file
-const JWT_AUTH = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJwZzE3MzZAc3JtaXN0LmVkdS5pbiIsImV4cCI6MTc3NzcwMDQxNSwiaWF0IjoxNzc3Njk5NTE1LCJpc3MiOiJBZmZvcmQgTWVkaWNhbCBUZWNobm9sb2dpZXMgUHJpdmF0ZSBMaW1pdGVkIiwianRpIjoiNmMzNTdmNDItNmE4Ny00MmRlLWFjNDYtNzFkMzA5ZDNhYWQ3IiwibG9jYWxlIjoiZW4tSU4iLCJuYW1lIjoicHVsa2l0IGd1cHRhIiwic3ViIjoiNTVhMzdjZGUtOTNkNS00OTY1LTk2MTMtMmVjYjZiMDJiNjFmIn0sImVtYWlsIjoicGcxNzM2QHNybWlzdC5lZHUuaW4iLCJuYW1lIjoicHVsa2l0IGd1cHRhIiwicm9sbE5vIjoicmEyMzExMDI4MDMwMDE0IiwiYWNjZXNzQ29kZSI6IlFrYnB4SCIsImNsaWVudElEIjoiNTVhMzdjZGUtOTNkNS00OTY1LTk2MTMtMmVjYjZiMDJiNjFmIiwiY2xpZW50U2VjcmV0IjoidXR2TXJ2SmZwYVFuRGNEayJ9.wqxevM1Px1MHJb062hViqwNsfRuv5Js5G4HOZoYsr7M";
+// geting token from global .env file so we don't have to duplicate it!
+const JWT_AUTH = process.env.VITE_JWT_AUTH;
 
 configureLoggerAuth(JWT_AUTH);
 
