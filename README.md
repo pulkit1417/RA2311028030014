@@ -33,3 +33,15 @@ This means whenever the token expires (which happens a lot!), you only have to u
 2. Run `npm install` to grab all the dependencies (like Material UI and react-router).
 3. Fire up the server with `npm run dev`.
 4. The Vite config is strictly locked to run on **http://localhost:3000**, so just head there in your browser!
+
+
+##Screen Shots
+<img width="932" height="308" alt="Screenshot 2026-05-02 105724" src="https://github.com/user-attachments/assets/372350e3-50e5-4187-a1d9-b5b4b360f96f" />
+<img width="1919" height="936" alt="Screenshot 2026-05-02 113320" src="https://github.com/user-attachments/assets/eb02c5a7-dc58-4490-9178-96632b520e39" />
+<img width="1919" height="938" alt="Screenshot 2026-05-02 113252" src="https://github.com/user-attachments/assets/a4bb5d38-47fa-44fc-97af-55024c9e977a" />
+
+##Screen Recording
+
+https://github.com/user-attachments/assets/786eda51-2721-4f9f-bafa-f638dc412abc
+
+
