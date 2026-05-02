@@ -1,0 +1,62 @@
+[
+  {
+    "ID": "18ef25cd-2a17-4137-9fec-68dd8e199551",
+    "Type": "Placement",
+    "Message": "Berkshire Hathaway Inc. hiring",
+    "Timestamp": "2026-05-02 04:54:15"
+  },
+  {
+    "ID": "7588e831-1b81-4da5-a1fa-ce4849935c58",
+    "Type": "Placement",
+    "Message": "Apple Inc. hiring",
+    "Timestamp": "2026-05-02 02:25:03"
+  },
+  {
+    "ID": "be84072e-a2d2-4278-8176-ec1c17323621",
+    "Type": "Placement",
+    "Message": "Marriott International Inc. hiring",
+    "Timestamp": "2026-05-01 21:53:51"
+  },
+  {
+    "ID": "2fcbada0-5a07-40fb-bd38-f02d46bf4685",
+    "Type": "Placement",
+    "Message": "Visa Inc. hiring",
+    "Timestamp": "2026-05-01 19:24:39"
+  },
+  {
+    "ID": "3308a252-c35f-47d6-afe0-fd22c231cae9",
+    "Type": "Placement",
+    "Message": "Amazon.com Inc. hiring",
+    "Timestamp": "2026-05-01 18:54:21"
+  },
+  {
+    "ID": "66529c05-66f2-4b64-88f4-6ab2956064bb",
+    "Type": "Result",
+    "Message": "project-review",
+    "Timestamp": "2026-05-02 02:25:15"
+  },
+  {
+    "ID": "a2ce37d6-f75a-4731-b57f-471ddd28e023",
+    "Type": "Result",
+    "Message": "end-sem",
+    "Timestamp": "2026-05-01 20:53:57"
+  },
+  {
+    "ID": "7d42f542-5def-42f0-ace5-ac5e6514c111",
+    "Type": "Result",
+    "Message": "mid-sem",
+    "Timestamp": "2026-05-01 17:54:57"
+  },
+  {
+    "ID": "da1ef703-82fc-4645-9a2e-32250bed3ff5",
+    "Type": "Result",
+    "Message": "external",
+    "Timestamp": "2026-05-01 16:55:33"
+  },
+  {
+    "ID": "409beaa9-d34d-4e1a-be3e-04d68c78793f",
+    "Type": "Result",
+    "Message": "internal",
+    "Timestamp": "2026-05-01 15:25:27"
+  }
+]
